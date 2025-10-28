@@ -24,7 +24,7 @@ By branding your organization’s Microsoft 365 sign-in experience, users can vi
 
 Go to the Entra portal and select **Entra ID > Conditional Access > Named Locations > Countries Location**. Enter name of location. Select **Include unknown countries/regions** and all countries. Search for Unitied Kingdom and de-select country. **Create** location. 
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/3e39090f4c9e6383cf55ffce43096ababdb18183/named_location.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag.png" />
 
 ---
 
@@ -32,7 +32,7 @@ Go to the Entra portal and select **Entra ID > Conditional Access > Named Locati
 
 Select **Entra ID > Conditional Access > Policies > New Policy**. Name the policy and select **All users**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_users.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag1.png" />
 
 ---
 
@@ -40,7 +40,7 @@ Select **Entra ID > Conditional Access > Policies > New Policy**. Name the polic
 
 Select policy to include **All resources**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_resources.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag2.png" />
 
 ---
 
@@ -48,7 +48,7 @@ Select policy to include **All resources**
 
 Configure policy to include **Select networks and locations** and select **All countries except UK**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_network.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag3.png" />
 
 ---
 
@@ -56,7 +56,7 @@ Configure policy to include **Select networks and locations** and select **All c
 
 Select **Grant** control access and set to **Block access**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_grant.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag4.png" />
 
 ---
 
@@ -64,7 +64,7 @@ Select **Grant** control access and set to **Block access**
 
 Turn on policy and **Create**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_enable.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag5.png" />
 
 ---
 
@@ -72,7 +72,7 @@ Turn on policy and **Create**
 
 Enable a VPN from non UK country to test policy is working 
 
-<img width="500" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/con_vpni.png" />
+<img width="500" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag6.png" />
 
 ---
 
@@ -80,7 +80,7 @@ Enable a VPN from non UK country to test policy is working
 
 Login as user to confirm that changes have now been implemented.
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_blocked.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag7.png" />
 
 ---
 
@@ -88,7 +88,7 @@ Login as user to confirm that changes have now been implemented.
 
 Select **Entra ID > Groups > New group**. Enter **Group name** and **Group desciption**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_group.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag8.png" />
 
 ---
 
@@ -96,7 +96,7 @@ Select **Entra ID > Groups > New group**. Enter **Group name** and **Group desci
 
 Select user to add to group in order to test execption works. 
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_add_member.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag9.png" />
 
 ---
 
@@ -104,7 +104,7 @@ Select user to add to group in order to test execption works.
 
 Select **Entra ID > Conditional Access > Policies > Block all countries except UK**. Select **Users > Exclude > Users and groups** and select group **International Access Exceptions**
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/53771291a9d14b73d9c05d44eda43a6702b6a869/ca_add_group.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag10.png" />
 
 ---
 
@@ -112,8 +112,64 @@ Select **Entra ID > Conditional Access > Policies > Block all countries except U
 
 Login again to VPN enabled browswer to confirm exception group works. 
 
-<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Entra/blob/766b1ed2154f24efc09cb740fe4bcabad9de0a32/ca_allowed.png" />
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag11.png" />
 
 ---
 
+### Step 13: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag12.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag13.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag14.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag15.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag16.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag17.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag18.png" />
+
+---
+### Step 12: Test exception group 
+
+Login again to VPN enabled browswer to confirm exception group works. 
+
+<img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag19.png" />
+
+---
 
