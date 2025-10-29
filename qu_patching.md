@@ -1,173 +1,171 @@
-# 🛡️ Microsoft Entra
-## 🎯 Scenario: Block all countries except UK
+# ⚠️ Qualys
+## 🎯 Scenario: Agent Setup and Patch Remediation 
 
 **Background:**  
 
-An accountancy firm identified multiple unauthorized sign-in attempts originating from foreign IP addresses. To reduce the risk of account compromise, a geolocation-based access control policy was required.
+Qualys cloud agent needs to be setup on Windows 11 PC and any outstanding patches required being applied. 
 
 ---
 
 ## ✅ Lab Objective  
 By branding your organization’s Microsoft 365 sign-in experience, users can visually confirm they are on the real company login portal:
 
-- Add countries locations to include UK as trusted site
-- Setup conditional access policy to block all countries except UK
-- Use a VPN connection to simulate a sign-in from a non-UK location.
-- Create a security group in Entra ID for approved exception users.
-- Test exception, reattempt the sign-in from a non-UK VPN location and confirm the user is allowed access as expected.
+- Download and install Qualys cloud agent on Windows 11 device
+- Identify if any patches are required 
+- Create Windows deployment job to install outstanding patches
 
 ---
 
 ## 🧩 Step-by-Step Instructions
 
-### Step 1: Add countries locations
+### Step 1: Locate Activation Keys
 
-Go to the Entra portal and select **Entra ID > Conditional Access > Named Locations > Countries Location**. Enter name of location. Select **Include unknown countries/regions** and all countries. Search for Unitied Kingdom and de-select country. **Create** location. 
+Go to the Qualys portal and select **Cloud Agent > Asset Management > Activation Keys**. Locate agent for endpoints and select **Install Agents** and select **Install instructions** for Windows (exe)
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag.png" />
 
 ---
 
-### Step 2: Setup conditional access policy 
+### Step 2: Download agent 
 
-Select **Entra ID > Conditional Access > Policies > New Policy**. Name the policy and select **All users**
+Select **Download.exe** to download the Windows agent. Copy command for installation. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag1.png" />
 
 ---
 
-### Step 3: Add resources to policy
+### Step 3: Copy agent to device
 
-Select policy to include **All resources**
+On Windows device copy agent in to folder ready for install.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag2.png" />
 
 ---
 
-### Step 4: Add network location to policy
+### Step 4: Install agent
 
-Configure policy to include **Select networks and locations** and select **All countries except UK**
+Open command prompt with admin privleges. Copy and run command for installing the agent. Confirm successful by checking agent is running within task manager. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag3.png" />
 
 ---
 
-### Step 5: Add acceess controls
+### Step 5: View device in Qualys
 
-Select **Grant** control access and set to **Block access**
+Navigate to **Cloud Agent > Asset Management > Agents** to confirm you can see device in cloud platform. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag4.png" />
 
 ---
 
-### Step 6: Enable policy 
+### Step 6: View device in Patch Management
 
-Turn on policy and **Create**
+Navigate to **Patch Management > Assets > Windows** to see if any patches are missing on device. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag5.png" />
 
 ---
 
-### Step 7: Enable VPN
+### Step 7: Asset Details
 
-Enable a VPN from non UK country to test policy is working 
+Select the asset name to view asset details. Select **Patch Management** to view missing patches then **View** to see patch list for device. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag6.png" />
 
 ---
 
-### Step 8: Test sign-in is blocked
+### Step 8: New Patch Job
 
-Login as user to confirm that changes have now been implemented.
+Select the patches and then **Actions > Add to new job**
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag7.png" />
 
 ---
 
-### Step 9: Create exception group 
+### Step 9: Create Windows Deployment Job
 
-Select **Entra ID > Groups > New group**. Enter **Group name** and **Group desciption**
+Enter title of the job and **Next**
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag8.png" />
 
 ---
 
-### Step 10: Add member
+### Step 10: Select Asset
 
-Select user to add to group in order to test execption works. 
+Select the asset which is to receive patches and **Next**
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag9.png" />
 
 ---
 
-### Step 11: Add group to policy
+### Step 11: Pre Actions
 
-Select **Entra ID > Conditional Access > Policies > Block all countries except UK**. Select **Users > Exclude > Users and groups** and select group **International Access Exceptions**
+Select **Next** for pre actions.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag10.png" />
 
 ---
 
-### Step 12: Test exception group 
+### Step 12: Select Patches
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Select the patches for manual installation and **Next**
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag11.png" />
 
 ---
 
-### Step 13: Test exception group 
+### Step 13: Post Actions 
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Select **Next** for post actions. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag12.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 14: Schedule
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Select **On-Demand** and **Next**
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag13.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 15: Reboot Request
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Enable reboot request for user and select **Next**.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag14.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 16: Reboot Countdown
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Enable reboot countdown and select **Next**.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag15.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 17: Job Access 
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Select **Next**.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag16.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 18: Enable Deployment
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Select **Save & Enable**.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag17.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 19: Execute Deployment
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Verify deployment is exectuting on device. 
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag18.png" />
 
 ---
-### Step 12: Test exception group 
+### Step 20: Confirm job success 
 
-Login again to VPN enabled browswer to confirm exception group works. 
+Confirm that job successfully has completed.
 
 <img width="1767" alt="Screen Shot 2025-05-07 at 11 26 51 PM" src="https://github.com/russellcayless/Qualys/blob/d6018a2d08c2df10750c5847d7095d208de2f35f/qu_ag19.png" />
 
