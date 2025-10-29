@@ -8,7 +8,6 @@ Qualys cloud agent needs to be setup on Windows 11 PC and any outstanding patche
 ---
 
 ## ✅ Lab Objective  
-By branding your organization’s Microsoft 365 sign-in experience, users can visually confirm they are on the real company login portal:
 
 - Download and install Qualys cloud agent on Windows 11 device
 - Identify if any patches are required 
